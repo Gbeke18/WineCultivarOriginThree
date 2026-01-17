@@ -1,0 +1,6 @@
+Name: Iyun Gbekeloluwa Olorunfemi
+Matric Number:22CD032152
+Machine Learning Algorithm Used: Logistic Regression
+Model Persistence Method: Joblib
+Live URL: https://winecultivaroriginthree.onrender.com
+GitHub Repository: https://github.com/Gbeke18/WineCultivarOriginThree
