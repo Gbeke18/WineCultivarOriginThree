@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request
-import pickle
+import joblib
 import numpy as np
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "wine_cultivar_model.pkl")
+
+model, scaler, features = joblib.load(MODEL_PATH)
 
 app = Flask(__name__)
-
-# Load model
-with open("model/wine_cultivar_model.pkl", "rb") as f:
-    model, scaler, features = pickle.load(f)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -23,3 +25,4 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
